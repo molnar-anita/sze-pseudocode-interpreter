@@ -1,0 +1,50 @@
+{
+  "name": "sze-pseudocode-interpreter",
+  "version": "1.0.0",
+  "repository": "https://github.com/attila-molnar/sze-pseudocode-interpreter.git",
+  "author": "Attila Molnár <mail@molnarattila.net>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+	"clean-dir": "^1.0.3",
+    "chai": "^4.2.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^6.1.3",
+    "nyc": "^13.3.0",
+    "ts-node": "^8.0.3",
+    "tslint": "^5.15.0",
+    "typescript": "^3.4.3"
+  },
+  "scripts": {
+    "precoverage": "cleandir Interpreter/@tests/@report",
+    "coverage": "nyc mocha --timeout 15000 -r ts-node/register Interpreter/@tests/**/*.test.ts",
+    "test": "mocha --timeout 15000 -r ts-node/register Interpreter/@tests/**/*.test.ts",
+	"build": "tsc -p Interpreter/tsconfig.json"
+  },
+  "nyc": {
+    "include": [
+      "Interpreter/**/*.ts"
+    ],
+    "exclude": [
+      "Interpreter/@tests/**/*"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true,
+    "report-dir": "Interpreter/@tests/@report",
+    "temp-directory": "./@temp"
+  },
+  "dependencies": {
+  }
+}

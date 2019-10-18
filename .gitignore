@@ -1,0 +1,7 @@
+
+built/
+node_modules/
+
+\@temp/
+
+.idea/

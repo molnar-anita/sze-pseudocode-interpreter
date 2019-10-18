@@ -1,0 +1,22 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+  "linterOptions": {
+    "typeCheck": true
+  },
+    "jsRules": {},
+    "rules": {
+      "no-conditional-assignment": false,
+      "no-namespace": true,
+      "jsdoc-format": false,
+      "max-line-length": false,
+      "no-shadowed-variable": false,
+      "no-console": false,
+      "no-reference": false,
+      "quotemark": [true, "single"],
+      "forin": false
+    },
+    "rulesDirectory": []
+}

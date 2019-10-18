@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "target": "es6",
+    "experimentalDecorators": true
+  },
+  "include": [
+    "Interpreter/**/*.ts"
+  ],
+  "exclude": [
+    "./**/node_modules"
+  ]
+}

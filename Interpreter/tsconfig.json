@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "amd",
+    "noImplicitAny": true,
+    "removeComments": false,
+    "target": "es6",
+    "sourceMap": true,
+    "locale": "hu",
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "@types"
+    ],
+    "declaration": true,
+    "outDir": "../built",
+    "outFile": "../built/Interpreter.js"
+  },
+  "include": [
+    "./**/*.ts"
+  ],
+  "exclude": [
+    "./@types",
+    "./node_modules",
+    "./@tests"
+  ]
+}
